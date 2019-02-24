@@ -5,25 +5,28 @@ import './index.scss';
 class SecKill extends Component {
     render(){
         return (
-            <div id="Seckill">
-                <div className="secKill_head">
-                    <h4 className="">今日秒杀</h4>
-                    <div className="countDown"></div>
-                    <div className="more">更多好货&gt;</div>
+            <div id="SecKill">
+                <div className="SecKill_title">
+                    <div>
+                        <span className="title">今日秒杀</span>
+                        <div className="timeStamp">
+                            {/* <span>{this.state.Hour}</span>:
+                            <span>{this.state.Minute}</span>:
+                            <span>{this.state.Second}</span> */}
+                        </div>
+                    </div>
+                    <span>更多好货&gt;</span>
                 </div>
-                <div className="secKill_main"> 
-                    <ul  className="secKill_list">
+                <div className="goodsWrap">
                     {
-                        this.props.SecKillData.map((item)=><li key={item.sku_id} className="secKill_item">
-                            <img src={item.image_url} alt={item.item_short_name} />
-                            <p className="secKill_item_name">{item.item_short_name}</p>
-                            <p className="secKill_item_price">
-                                <span>&yen;{item.promotion_price/100}</span>&nbsp;&nbsp;
-                                <s>&yen;{item.market_price/100}</s>
-                            </p>
-                        </li>)
+                        this.props.SecKillData.map((item,index)=><ul key={index} className="SecKillList">
+                            <li className="SecKillItem">
+                                <img src={item.image_url} alt={item.item_id} />
+                                <p className="SecKill_itemName">{item.item_short_name}</p>
+                                <p><span className="promotion_price">&yen;{item.promotion_price/100}</span><s className="market_price">&yen;{item.market_price/100}</s></p>
+                            </li>
+                        </ul>)
                     }
-                    </ul>
                 </div>
             </div>
         )

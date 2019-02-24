@@ -10,7 +10,7 @@ class MySwiper extends Component {
     //引用swiper轮播插件遇到的bug:4.***版本不能自动轮播,安装 npm i -s swiper@3.4.2 版本
     //用3.4.2版本时,手动拖拽不能轮播,因为请求图片数据是异步处理的,需要设置observer:true,  observerParents:true,
     //第一幅图片一闪而过问题,使用延时器解决,
-    //点击后无法自动轮播问题: autoplayDisableOnI autoplayDisableOnInteraction:false, 
+    //点击后无法自动轮播问题: 设置 autoplayDisableOnInteraction:false, 
     //一个页面有多个轮播图存在时的bug 
     //使用时,className="swiper-container",className="swiper-wrapper"这些是固定的不能更改名称
 

@@ -1,0 +1,23 @@
+#TopNav{
+    img{width:100%;}
+    .fourNavGif{
+        width: 100%;
+        display: flex;
+        .fourGifWrap{
+            width: 25%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .luckyMoneyGif{
+        width: 100%;
+        display: flex;
+        .luckyMoneyGifWrap{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

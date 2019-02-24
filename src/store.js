@@ -2,7 +2,7 @@
 //定义中间件组件
 //applyMiddleware 允许使用中间件
 //compose 添加 devtools 调试工具使用的
-import {createStore,applyMiddleware,compose} from 'redux';
+import {createStore,applyMiddleware} from 'redux';
 
 //引入路由中间件
 import {routerMiddleware} from 'react-router-redux';
